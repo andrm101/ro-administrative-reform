@@ -41,17 +41,27 @@ OUTPUT_PATH  <- file.path(DATA_PROC, "ro_pvar_forecasts_roi.parquet")
 REFORM_YEAR  <- 2025
 RAMP_YEARS   <- 5   # years over which multiplier ramps from 0 to full effect
 
-# Annual GDP/population ln-uplift above counterfactual, per ecosystem type
-# Source: Moretti (2010) local multiplier effects, adapted for Eastern European context
+# Annual GDP/population ln-uplift above counterfactual, per ecosystem type.
+# Source: Moretti (2010) local multiplier effects, adapted for Eastern European context.
+# T6/T7/T8 anchored to the closest analogous Moretti category rather than given
+# independent estimates -- see rationale below each.
 MORETTI_MULTIPLIERS <- c(
-  T1 = 0.025,  # AI/ML hub
-  T2 = 0.020,  # Biotech
-  T3 = 0.015,  # Advanced manufacturing
-  T4 = 0.012,  # Cleantech
-  T5 = 0.010,  # Hyperscale data centre
-  T6 = 0.008,  # Creative economy
-  T7 = 0.007,  # Agri-food innovation
-  T8 = 0.006   # Logistics/mobility
+  T1 = 0.025,  # AI / Machine Learning Hub
+  T2 = 0.020,  # Biotechnology / Life Sciences
+  T3 = 0.015,  # Semiconductors / Advanced Electronics (advanced manufacturing)
+  T4 = 0.012,  # Cleantech / Green Technology
+  T5 = 0.010,  # Hyperscale Data Centre Hub
+  T6 = 0.014,  # HALEU / Advanced Nuclear Industrial Base
+               #   anchored near T3: capital-intensive industrial construction and
+               #   long-run supply-chain employment, comparable agglomeration profile
+               #   to advanced manufacturing rather than to services/logistics.
+  T7 = 0.015,  # Deep-Tech Robotics Campus
+               #   anchored at T3: advanced-manufacturing analog (precision assembly,
+               #   component supply chains).
+  T8 = 0.018   # Quantum / Photonics Research Anchor
+               #   anchored near T2: research-institution-led knowledge spillovers
+               #   (few production jobs, high knowledge-economy multiplier), not a
+               #   production-employment profile.
 )
 
 # ── Load inputs ────────────────────────────────────────────────────────────────
