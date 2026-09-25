@@ -174,15 +174,21 @@ counterfactual_rows <- fcst |>
   left_join(suit, by = "nuts3_code")
 
 # For counties without Tier-1 gate or no annual_uplift: innovation_hub = counterfactual (no uplift)
+compute_ramp <- function(bracket_bound, gated, year) {
+  case_when(
+    !gated | is.na(bracket_bound) ~ 0,
+    year < REFORM_YEAR ~ 0,
+    year >= REFORM_YEAR & year < REFORM_YEAR + RAMP_YEARS ~
+      bracket_bound * (year - REFORM_YEAR + 1) / RAMP_YEARS,
+    TRUE ~ bracket_bound
+  )
+}
+
 innovation_rows <- counterfactual_rows |>
   mutate(
-    ramp_factor = case_when(
-      !tier1_gate | is.na(annual_uplift) ~ 0,
-      year < REFORM_YEAR ~ 0,
-      year >= REFORM_YEAR & year < REFORM_YEAR + RAMP_YEARS ~
-        annual_uplift * (year - REFORM_YEAR + 1) / RAMP_YEARS,
-      TRUE ~ annual_uplift
-    ),
+    ramp_factor = compute_ramp(annual_uplift, tier1_gate, year),
+    ramp_factor_pessimistic = compute_ramp(bracket_pessimistic, tier1_gate, year),
+    ramp_factor_optimistic  = compute_ramp(bracket_optimistic, tier1_gate, year),
     # Save original value for band expansion reference
     value_orig = value,
     # Apply uplift only to ln_population (primary demographic outcome)
@@ -193,16 +199,15 @@ innovation_rows <- counterfactual_rows |>
       value
     ),
     # Pessimistic/optimistic bracket: same ramp shape as the central (Estimate B)
-    # path, scaled by the ratio of the bracket bound to the central annual_uplift
-    # so a Tier-1 county's bracket ramps identically to its central estimate.
+    # path, using each bound's own ramp so the progression isn't double-applied.
     value_pessimistic = if_else(
-      variable == "ln_population" & !is.na(bracket_pessimistic),
-      value_orig + ramp_factor * (bracket_pessimistic / pmax(annual_uplift, 1e-9)) * (year - REFORM_YEAR + 1),
+      variable == "ln_population",
+      value_orig + ramp_factor_pessimistic * (year - REFORM_YEAR + 1),
       NA_real_
     ),
     value_optimistic = if_else(
-      variable == "ln_population" & !is.na(bracket_optimistic),
-      value_orig + ramp_factor * (bracket_optimistic / pmax(annual_uplift, 1e-9)) * (year - REFORM_YEAR + 1),
+      variable == "ln_population",
+      value_orig + ramp_factor_optimistic * (year - REFORM_YEAR + 1),
       NA_real_
     ),
     # Uncertainty bands expanded 5% of original band width (based on original value)
@@ -215,7 +220,7 @@ innovation_rows <- counterfactual_rows |>
   select(-tier1_gate, -tier1_types, -annual_uplift, -dominant_type, -nuts2_code,
          -archetype_id, -growth_premium_pp, -estimate_a_annual, -estimate_b_annual,
          -estimate_c_annual, -bracket_pessimistic, -bracket_optimistic,
-         -ramp_factor, -value_orig)
+         -ramp_factor, -ramp_factor_pessimistic, -ramp_factor_optimistic, -value_orig)
 
 # ── Combine and write ──────────────────────────────────────────────────────────
 fcst_out <- bind_rows(fcst, innovation_rows) |>
