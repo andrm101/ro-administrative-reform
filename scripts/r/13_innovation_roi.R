@@ -33,13 +33,31 @@ ROOT <- tryCatch({
   }
 }, error = function(e) getwd())
 DATA_PROC <- file.path(ROOT, "data", "processed")
+SIBLING_ROOT <- normalizePath(file.path(ROOT, ".."))
 
 SUIT_PATH    <- file.path(DATA_PROC, "ro_nuts3_suitability.parquet")
 FCST_PATH    <- file.path(DATA_PROC, "ro_pvar_forecasts.parquet")
 OUTPUT_PATH  <- file.path(DATA_PROC, "ro_pvar_forecasts_roi.parquet")
+ESTIMATE_A_PATH <- file.path(SIBLING_ROOT, "EU-Innovation-Panel", "analysis",
+                              "p11_archetype_growth_premium.csv")
+ESTIMATE_C_PATH <- file.path(SIBLING_ROOT, "PL-Capital-Reform-DiD", "analysis",
+                              "retained_capital_benchmark.csv")
 
 REFORM_YEAR  <- 2025
 RAMP_YEARS   <- 5   # years over which multiplier ramps from 0 to full effect
+
+check_sibling_path <- function(path, label) {
+  if (!file.exists(path)) {
+    stop(sprintf(
+      "Missing sibling-project dependency for %s: expected file at %s. %s",
+      label, path,
+      "Run that project's Stage 13 input script first (see docs/superpowers/specs/2026-09-25-stage13-innovation-roi-design.md)."
+    ))
+  }
+  path
+}
+check_sibling_path(ESTIMATE_A_PATH, "Estimate A (archetype growth premium)")
+check_sibling_path(ESTIMATE_C_PATH, "Estimate C (retained-capital benchmark)")
 
 # Annual GDP/population ln-uplift above counterfactual, per ecosystem type.
 # Source: Moretti (2010) local multiplier effects, adapted for Eastern European context.
@@ -66,7 +84,7 @@ MORETTI_MULTIPLIERS <- c(
 
 # ── Load inputs ────────────────────────────────────────────────────────────────
 suit <- read_parquet(SUIT_PATH) |>
-  select(nuts3_code, tier1_gate, tier1_types)
+  select(nuts3_code, nuts2_code, tier1_gate, tier1_types)
 
 # Remove pre-existing innovation_hub rows (NaN placeholders from Stage 09)
 fcst_raw <- read_parquet(FCST_PATH)
@@ -106,6 +124,49 @@ suit <- suit |>
 cat("Tier-1 counties:", sum(suit$tier1_gate, na.rm = TRUE), "\n")
 cat("Uplift range:", paste(range(suit$annual_uplift, na.rm = TRUE), collapse = " - "), "\n")
 
+# ── Load Estimates A and C ──────────────────────────────────────────────────────
+# Estimate A: EU-Innovation-Panel's archetype growth premium (archetype_id is an
+# integer 0/1, matching that repo's Gold-layer join key -- NOT "A1"/"A2" strings).
+# Romanian NUTS2 codes are already the join key used by ro_nuts3_suitability.parquet's
+# nuts2_code column; all 8 Romanian NUTS2 regions have a direct 1:1 archetype_id in
+# the Gold layer, so no NUTS2-parent lookup/downscaling is needed here (unlike the
+# suitability scores in build_nuts3_suitability.py, which are computed at NUTS2 level
+# and downscaled -- archetype_id is consumed as-is, at NUTS2 granularity).
+estimate_a_raw <- read_csv(ESTIMATE_A_PATH, show_col_types = FALSE) |>
+  select(archetype_id, growth_premium_pp) |>
+  mutate(estimate_a_annual = growth_premium_pp / 100)  # pp/yr -> ln-uplift/yr
+
+ro_nuts2_archetype <- read_parquet(
+  file.path(SIBLING_ROOT, "EU-Innovation-Panel", "data", "gold", "region_profiles_gold.parquet")
+) |>
+  as.data.frame() |>
+  tibble::rownames_to_column("nuts2_code") |>
+  filter(str_starts(nuts2_code, "RO")) |>
+  select(nuts2_code, archetype_id)
+
+estimate_c_tbl <- read_csv(ESTIMATE_C_PATH, show_col_types = FALSE)
+estimate_c_annual <- estimate_c_tbl |>
+  filter(city_en == "AVERAGE") |>
+  pull(annual_growth_ln)
+stopifnot(length(estimate_c_annual) == 1, !is.na(estimate_c_annual))
+cat("Estimate C (retained-capital benchmark, AVERAGE):", estimate_c_annual, "\n")
+
+# ── Assemble the three-estimate bracket ─────────────────────────────────────────
+suit <- suit |>
+  left_join(ro_nuts2_archetype, by = "nuts2_code") |>
+  left_join(estimate_a_raw, by = "archetype_id") |>
+  mutate(
+    estimate_b_annual = annual_uplift,  # existing Moretti-based estimate
+    estimate_c_annual = estimate_c_annual,
+    bracket_pessimistic = pmin(estimate_a_annual, estimate_b_annual, estimate_c_annual, na.rm = TRUE),
+    bracket_optimistic  = pmax(estimate_a_annual, estimate_b_annual, estimate_c_annual, na.rm = TRUE)
+  )
+
+cat("Bracket assembled. Pessimistic range:",
+    paste(range(suit$bracket_pessimistic, na.rm = TRUE), collapse = " - "), "\n")
+cat("Optimistic range:",
+    paste(range(suit$bracket_optimistic, na.rm = TRUE), collapse = " - "), "\n")
+
 # ── Build innovation_hub path ──────────────────────────────────────────────────
 # Only showcase counties appear in the forecast; join limits to those present
 counterfactual_rows <- fcst |>
@@ -131,6 +192,19 @@ innovation_rows <- counterfactual_rows |>
       value + ramp_factor * (year - REFORM_YEAR + 1),
       value
     ),
+    # Pessimistic/optimistic bracket: same ramp shape as the central (Estimate B)
+    # path, scaled by the ratio of the bracket bound to the central annual_uplift
+    # so a Tier-1 county's bracket ramps identically to its central estimate.
+    value_pessimistic = if_else(
+      variable == "ln_population" & !is.na(bracket_pessimistic),
+      value_orig + ramp_factor * (bracket_pessimistic / pmax(annual_uplift, 1e-9)) * (year - REFORM_YEAR + 1),
+      NA_real_
+    ),
+    value_optimistic = if_else(
+      variable == "ln_population" & !is.na(bracket_optimistic),
+      value_orig + ramp_factor * (bracket_optimistic / pmax(annual_uplift, 1e-9)) * (year - REFORM_YEAR + 1),
+      NA_real_
+    ),
     # Uncertainty bands expanded 5% of original band width (based on original value)
     lo80 = if_else(variable == "ln_population", lo80 - abs(value_orig - lo80) * 0.05, lo80),
     hi80 = if_else(variable == "ln_population", hi80 + abs(hi80 - value_orig) * 0.05, hi80),
@@ -138,7 +212,9 @@ innovation_rows <- counterfactual_rows |>
     hi95 = if_else(variable == "ln_population", hi95 + abs(hi95 - value_orig) * 0.05, hi95),
     path = "innovation_hub"
   ) |>
-  select(-tier1_gate, -tier1_types, -annual_uplift, -dominant_type,
+  select(-tier1_gate, -tier1_types, -annual_uplift, -dominant_type, -nuts2_code,
+         -archetype_id, -growth_premium_pp, -estimate_a_annual, -estimate_b_annual,
+         -estimate_c_annual, -bracket_pessimistic, -bracket_optimistic,
          -ramp_factor, -value_orig)
 
 # ── Combine and write ──────────────────────────────────────────────────────────

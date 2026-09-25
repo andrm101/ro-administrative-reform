@@ -34,7 +34,7 @@ Key outputs this project will deliver:
 | 08 LP | `scripts/08_local_projections.py` | PASS | `ro_lp_irfs.parquet` (100 rows, 4 outcomes × 25 horizons); 4 IRF figures |
 | NUTS3 suitability | `scripts/build_nuts3_suitability.py` | PASS | `ro_nuts3_suitability.parquet` (42 rows, 24 cols, 17 Tier-1 counties) |
 | 09 MG-VAR | `scripts/09_pvar_forecast.py` | PASS | `ro_pvar_forecasts.parquet` (1056 rows, 8 counties, 3 paths) |
-| 13 Innovation ROI | `scripts/r/13_innovation_roi.R` | PASS | `ro_pvar_forecasts_roi.parquet` (1056 rows, 3 paths incl. innovation_hub) |
+| 13 Innovation ROI | `scripts/r/13_innovation_roi.R` | PASS | `ro_pvar_forecasts_roi.parquet` (three-estimate bracket: A=EU-Innovation-Panel archetype premium, B=corrected Moretti multipliers, C=PL-Capital-Reform-DiD retained-capital benchmark; value_pessimistic/value_optimistic columns added; requires those two sibling repos' Stage 13 inputs to be run first) |
 | React dashboard | `dashboard/` | PASS | `npm run build` succeeds; `public/data/` populated with real exported JSON (forecasts.json 152K, regions.json 144K, suitability.json, etc.), not placeholders |
 
 ---
