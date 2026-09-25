@@ -35,7 +35,7 @@ Key outputs this project will deliver:
 | NUTS3 suitability | `scripts/build_nuts3_suitability.py` | PASS | `ro_nuts3_suitability.parquet` (42 rows, 24 cols, 17 Tier-1 counties) |
 | 09 MG-VAR | `scripts/09_pvar_forecast.py` | PASS | `ro_pvar_forecasts.parquet` (1056 rows, 8 counties, 3 paths) |
 | 13 Innovation ROI | `scripts/r/13_innovation_roi.R` | PASS | `ro_pvar_forecasts_roi.parquet` (1056 rows, 3 paths incl. innovation_hub) |
-| React dashboard | `dashboard/` | NOT STARTED | Phase 4 |
+| React dashboard | `dashboard/` | PASS | `npm run build` succeeds; `public/data/` populated with real exported JSON (forecasts.json 152K, regions.json 144K, suitability.json, etc.), not placeholders |
 
 ---
 
