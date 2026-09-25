@@ -1,0 +1,1689 @@
+{
+  "_meta": {
+    "overpass_query_date": "2026-06-06",
+    "script_version": "1.0.0",
+    "git_sha": "1f41634",
+    "aggregation_default": "geometric",
+    "weighting_default": "equal",
+    "cronbach_alpha": 0.875,
+    "pillar_correlation": [
+      [
+        1.0,
+        0.608,
+        0.818,
+        0.613
+      ],
+      [
+        0.608,
+        1.0,
+        0.677,
+        0.423
+      ],
+      [
+        0.818,
+        0.677,
+        1.0,
+        0.668
+      ],
+      [
+        0.613,
+        0.423,
+        0.668,
+        1.0
+      ]
+    ],
+    "ensemble_variants": 8
+  },
+  "counties": {
+    "RO122": {
+      "name": "RO122",
+      "nuts2_code": "",
+      "capacity_index": 63.3,
+      "capacity_index_arithmetic": 67.7,
+      "national_percentile": 88,
+      "rank_interval": [
+        5,
+        5
+      ],
+      "rank_median": 5,
+      "pillars": {
+        "transport": {
+          "score": 100.0,
+          "features": 2408,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 60.9,
+          "features": 29,
+          "confidence": "high"
+        },
+        "health": {
+          "score": 74.2,
+          "features": 88,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 35.6,
+          "features": 175,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO316",
+        "RO113"
+      ],
+      "divergence": null
+    },
+    "RO123": {
+      "name": "Covasna",
+      "nuts2_code": "RO12",
+      "capacity_index": 20.7,
+      "capacity_index_arithmetic": 22.7,
+      "national_percentile": 45,
+      "rank_interval": [
+        22,
+        25
+      ],
+      "rank_median": 24,
+      "pillars": {
+        "transport": {
+          "score": 24.5,
+          "features": 732,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 14.2,
+          "features": 5,
+          "confidence": "medium"
+        },
+        "health": {
+          "score": 13.8,
+          "features": 18,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 38.1,
+          "features": 127,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO421",
+        "RO314"
+      ],
+      "divergence": null
+    },
+    "RO124": {
+      "name": "Harghita",
+      "nuts2_code": "RO12",
+      "capacity_index": 2.2,
+      "capacity_index_arithmetic": 11.4,
+      "national_percentile": 17,
+      "rank_interval": [
+        33,
+        35
+      ],
+      "rank_median": 34,
+      "pillars": {
+        "transport": {
+          "score": 12.3,
+          "features": 1074,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 0.0,
+          "features": 0,
+          "confidence": "low"
+        },
+        "health": {
+          "score": 7.6,
+          "features": 25,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 25.9,
+          "features": 175,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO414",
+        "RO312"
+      ],
+      "divergence": null
+    },
+    "RO125": {
+      "name": "Mure\u0219",
+      "nuts2_code": "RO12",
+      "capacity_index": 39.1,
+      "capacity_index_arithmetic": 40.1,
+      "national_percentile": 81,
+      "rank_interval": [
+        8,
+        12
+      ],
+      "rank_median": 10,
+      "pillars": {
+        "transport": {
+          "score": 46.4,
+          "features": 1795,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 36.8,
+          "features": 22,
+          "confidence": "high"
+        },
+        "health": {
+          "score": 49.9,
+          "features": 78,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 27.4,
+          "features": 178,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO126",
+        "RO313"
+      ],
+      "divergence": null
+    },
+    "RO126": {
+      "name": "Sibiu",
+      "nuts2_code": "RO12",
+      "capacity_index": 37.7,
+      "capacity_index_arithmetic": 41.1,
+      "national_percentile": 76,
+      "rank_interval": [
+        10,
+        11
+      ],
+      "rank_median": 10,
+      "pillars": {
+        "transport": {
+          "score": 50.8,
+          "features": 1561,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 57.6,
+          "features": 28,
+          "confidence": "high"
+        },
+        "health": {
+          "score": 38.0,
+          "features": 52,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 18.2,
+          "features": 111,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO125",
+        "RO311"
+      ],
+      "divergence": null
+    },
+    "RO211": {
+      "name": "Bac\u0103u",
+      "nuts2_code": "RO21",
+      "capacity_index": 20.5,
+      "capacity_index_arithmetic": 20.6,
+      "national_percentile": 40,
+      "rank_interval": [
+        24,
+        26
+      ],
+      "rank_median": 26,
+      "pillars": {
+        "transport": {
+          "score": 22.6,
+          "features": 1288,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 19.2,
+          "features": 12,
+          "confidence": "high"
+        },
+        "health": {
+          "score": 18.8,
+          "features": 39,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 21.8,
+          "features": 153,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO115",
+        "RO421"
+      ],
+      "divergence": null
+    },
+    "RO212": {
+      "name": "Boto\u0219ani",
+      "nuts2_code": "RO21",
+      "capacity_index": 10.4,
+      "capacity_index_arithmetic": 12.9,
+      "national_percentile": 31,
+      "rank_interval": [
+        29,
+        31
+      ],
+      "rank_median": 30,
+      "pillars": {
+        "transport": {
+          "score": 4.7,
+          "features": 675,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 19.0,
+          "features": 9,
+          "confidence": "medium"
+        },
+        "health": {
+          "score": 5.8,
+          "features": 17,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 22.1,
+          "features": 117,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO317",
+        "RO315"
+      ],
+      "divergence": null
+    },
+    "RO213": {
+      "name": "RO213",
+      "nuts2_code": "",
+      "capacity_index": 38.0,
+      "capacity_index_arithmetic": 42.8,
+      "national_percentile": 79,
+      "rank_interval": [
+        8,
+        9
+      ],
+      "rank_median": 9,
+      "pillars": {
+        "transport": {
+          "score": 24.0,
+          "features": 1061,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 60.6,
+          "features": 29,
+          "confidence": "high"
+        },
+        "health": {
+          "score": 64.0,
+          "features": 78,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 22.5,
+          "features": 126,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO125",
+        "RO126"
+      ],
+      "divergence": null
+    },
+    "RO214": {
+      "name": "Neam\u021b",
+      "nuts2_code": "RO21",
+      "capacity_index": 21.2,
+      "capacity_index_arithmetic": 22.3,
+      "national_percentile": 50,
+      "rank_interval": [
+        21,
+        24
+      ],
+      "rank_median": 22,
+      "pillars": {
+        "transport": {
+          "score": 15.8,
+          "features": 983,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 22.4,
+          "features": 12,
+          "confidence": "high"
+        },
+        "health": {
+          "score": 34.4,
+          "features": 51,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 16.6,
+          "features": 111,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO222",
+        "RO411"
+      ],
+      "divergence": null
+    },
+    "RO215": {
+      "name": "Suceava",
+      "nuts2_code": "RO21",
+      "capacity_index": 13.9,
+      "capacity_index_arithmetic": 16.4,
+      "national_percentile": 36,
+      "rank_interval": [
+        27,
+        28
+      ],
+      "rank_median": 28,
+      "pillars": {
+        "transport": {
+          "score": 21.5,
+          "features": 1608,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 27.0,
+          "features": 21,
+          "confidence": "high"
+        },
+        "health": {
+          "score": 11.6,
+          "features": 38,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 5.6,
+          "features": 97,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO412",
+        "RO114"
+      ],
+      "divergence": null
+    },
+    "RO216": {
+      "name": "Vaslui",
+      "nuts2_code": "RO21",
+      "capacity_index": 5.9,
+      "capacity_index_arithmetic": 7.5,
+      "national_percentile": 21,
+      "rank_interval": [
+        33,
+        37
+      ],
+      "rank_median": 35,
+      "pillars": {
+        "transport": {
+          "score": 13.5,
+          "features": 865,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 2.9,
+          "features": 2,
+          "confidence": "medium"
+        },
+        "health": {
+          "score": 3.0,
+          "features": 15,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 10.7,
+          "features": 80,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO414",
+        "RO116"
+      ],
+      "divergence": null
+    },
+    "RO221": {
+      "name": "Br\u0103ila",
+      "nuts2_code": "RO22",
+      "capacity_index": 22.7,
+      "capacity_index_arithmetic": 28.0,
+      "national_percentile": 52,
+      "rank_interval": [
+        16,
+        20
+      ],
+      "rank_median": 20,
+      "pillars": {
+        "transport": {
+          "score": 13.6,
+          "features": 776,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 39.6,
+          "features": 17,
+          "confidence": "high"
+        },
+        "health": {
+          "score": 10.2,
+          "features": 20,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 48.4,
+          "features": 199,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO315",
+        "RO115"
+      ],
+      "divergence": null
+    },
+    "RO222": {
+      "name": "Buz\u0103u",
+      "nuts2_code": "RO22",
+      "capacity_index": 24.6,
+      "capacity_index_arithmetic": 25.9,
+      "national_percentile": 60,
+      "rank_interval": [
+        17,
+        21
+      ],
+      "rank_median": 18,
+      "pillars": {
+        "transport": {
+          "score": 19.6,
+          "features": 1080,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 27.7,
+          "features": 15,
+          "confidence": "high"
+        },
+        "health": {
+          "score": 39.5,
+          "features": 58,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 16.9,
+          "features": 115,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO214",
+        "RO411"
+      ],
+      "divergence": null
+    },
+    "RO223": {
+      "name": "RO223",
+      "nuts2_code": "",
+      "capacity_index": 52.8,
+      "capacity_index_arithmetic": 58.2,
+      "national_percentile": 83,
+      "rank_interval": [
+        7,
+        7
+      ],
+      "rank_median": 7,
+      "pillars": {
+        "transport": {
+          "score": 42.8,
+          "features": 1867,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 30.5,
+          "features": 20,
+          "confidence": "high"
+        },
+        "health": {
+          "score": 59.4,
+          "features": 98,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 100.0,
+          "features": 567,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO424",
+        "RO415"
+      ],
+      "divergence": null
+    },
+    "RO224": {
+      "name": "Gala\u021bi",
+      "nuts2_code": "RO22",
+      "capacity_index": 35.0,
+      "capacity_index_arithmetic": 44.0,
+      "national_percentile": 74,
+      "rank_interval": [
+        8,
+        11
+      ],
+      "rank_median": 10,
+      "pillars": {
+        "transport": {
+          "score": 17.9,
+          "features": 774,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 100.0,
+          "features": 39,
+          "confidence": "high"
+        },
+        "health": {
+          "score": 32.5,
+          "features": 37,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 25.7,
+          "features": 112,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO423",
+        "RO213"
+      ],
+      "divergence": null
+    },
+    "RO225": {
+      "name": "Tulcea",
+      "nuts2_code": "RO22",
+      "capacity_index": 0.1,
+      "capacity_index_arithmetic": 4.7,
+      "national_percentile": 0,
+      "rank_interval": [
+        41,
+        42
+      ],
+      "rank_median": 42,
+      "pillars": {
+        "transport": {
+          "score": 0.0,
+          "features": 555,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 0.0,
+          "features": 1,
+          "confidence": "low"
+        },
+        "health": {
+          "score": 0.0,
+          "features": 8,
+          "confidence": "medium"
+        },
+        "economic": {
+          "score": 18.7,
+          "features": 171,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO312",
+        "RO317"
+      ],
+      "divergence": null
+    },
+    "RO226": {
+      "name": "Vrancea",
+      "nuts2_code": "RO22",
+      "capacity_index": 13.3,
+      "capacity_index_arithmetic": 16.7,
+      "national_percentile": 33,
+      "rank_interval": [
+        27,
+        28
+      ],
+      "rank_median": 28,
+      "pillars": {
+        "transport": {
+          "score": 38.0,
+          "features": 1179,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 10.4,
+          "features": 5,
+          "confidence": "medium"
+        },
+        "health": {
+          "score": 11.0,
+          "features": 21,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 7.3,
+          "features": 61,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO413",
+        "RO116"
+      ],
+      "divergence": null
+    },
+    "RO311": {
+      "name": "Arge\u0219",
+      "nuts2_code": "RO31",
+      "capacity_index": 27.3,
+      "capacity_index_arithmetic": 34.2,
+      "national_percentile": 64,
+      "rank_interval": [
+        13,
+        15
+      ],
+      "rank_median": 14,
+      "pillars": {
+        "transport": {
+          "score": 59.9,
+          "features": 2153,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 49.3,
+          "features": 30,
+          "confidence": "high"
+        },
+        "health": {
+          "score": 14.4,
+          "features": 34,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 13.1,
+          "features": 114,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO121",
+        "RO126"
+      ],
+      "divergence": null
+    },
+    "RO312": {
+      "name": "C\u0103l\u0103ra\u0219i",
+      "nuts2_code": "RO31",
+      "capacity_index": 0.3,
+      "capacity_index_arithmetic": 6.1,
+      "national_percentile": 5,
+      "rank_interval": [
+        40,
+        40
+      ],
+      "rank_median": 40,
+      "pillars": {
+        "transport": {
+          "score": 2.5,
+          "features": 620,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 0.0,
+          "features": 0,
+          "confidence": "low"
+        },
+        "health": {
+          "score": 0.0,
+          "features": 11,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 21.9,
+          "features": 113,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO225",
+        "RO317"
+      ],
+      "divergence": null
+    },
+    "RO313": {
+      "name": "D\u00e2mbovi\u021ba",
+      "nuts2_code": "RO31",
+      "capacity_index": 28.0,
+      "capacity_index_arithmetic": 33.7,
+      "national_percentile": 69,
+      "rank_interval": [
+        13,
+        14
+      ],
+      "rank_median": 13,
+      "pillars": {
+        "transport": {
+          "score": 59.1,
+          "features": 1252,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 12.9,
+          "features": 5,
+          "confidence": "medium"
+        },
+        "health": {
+          "score": 44.5,
+          "features": 43,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 18.1,
+          "features": 81,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO125",
+        "RO111"
+      ],
+      "divergence": null
+    },
+    "RO314": {
+      "name": "Giurgiu",
+      "nuts2_code": "RO31",
+      "capacity_index": 15.1,
+      "capacity_index_arithmetic": 20.8,
+      "national_percentile": 38,
+      "rank_interval": [
+        25,
+        26
+      ],
+      "rank_median": 26,
+      "pillars": {
+        "transport": {
+          "score": 33.3,
+          "features": 816,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 5.0,
+          "features": 2,
+          "confidence": "medium"
+        },
+        "health": {
+          "score": 8.7,
+          "features": 14,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 36.0,
+          "features": 118,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO123",
+        "RO421"
+      ],
+      "divergence": null
+    },
+    "RO315": {
+      "name": "Ialomi\u021ba",
+      "nuts2_code": "RO31",
+      "capacity_index": 0.9,
+      "capacity_index_arithmetic": 15.6,
+      "national_percentile": 7,
+      "rank_interval": [
+        29,
+        39
+      ],
+      "rank_median": 34,
+      "pillars": {
+        "transport": {
+          "score": 0.1,
+          "features": 551,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 25.7,
+          "features": 11,
+          "confidence": "high"
+        },
+        "health": {
+          "score": 0.0,
+          "features": 9,
+          "confidence": "medium"
+        },
+        "economic": {
+          "score": 36.7,
+          "features": 156,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO212",
+        "RO221"
+      ],
+      "divergence": null
+    },
+    "RO316": {
+      "name": "RO316",
+      "nuts2_code": "",
+      "capacity_index": 63.4,
+      "capacity_index_arithmetic": 68.5,
+      "national_percentile": 90,
+      "rank_interval": [
+        4,
+        4
+      ],
+      "rank_median": 4,
+      "pillars": {
+        "transport": {
+          "score": 94.0,
+          "features": 2018,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 32.8,
+          "features": 14,
+          "confidence": "high"
+        },
+        "health": {
+          "score": 87.1,
+          "features": 89,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 60.2,
+          "features": 236,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO122",
+        "RO424"
+      ],
+      "divergence": null
+    },
+    "RO317": {
+      "name": "Teleorman",
+      "nuts2_code": "RO31",
+      "capacity_index": 1.6,
+      "capacity_index_arithmetic": 7.4,
+      "national_percentile": 12,
+      "rank_interval": [
+        37,
+        38
+      ],
+      "rank_median": 38,
+      "pillars": {
+        "transport": {
+          "score": 0.0,
+          "features": 587,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 8.6,
+          "features": 5,
+          "confidence": "medium"
+        },
+        "health": {
+          "score": 5.6,
+          "features": 19,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 15.3,
+          "features": 105,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO225",
+        "RO312"
+      ],
+      "divergence": null
+    },
+    "RO321": {
+      "name": "RO321",
+      "nuts2_code": "",
+      "capacity_index": 100.0,
+      "capacity_index_arithmetic": 100.0,
+      "national_percentile": 98,
+      "rank_interval": [
+        1,
+        1
+      ],
+      "rank_median": 1,
+      "pillars": {
+        "transport": {
+          "score": 100.0,
+          "features": 2209,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 100.0,
+          "features": 160,
+          "confidence": "high"
+        },
+        "health": {
+          "score": 100.0,
+          "features": 398,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 100.0,
+          "features": 126,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO322",
+        "RO424"
+      ],
+      "divergence": null
+    },
+    "RO322": {
+      "name": "RO322",
+      "nuts2_code": "",
+      "capacity_index": 98.1,
+      "capacity_index_arithmetic": 98.2,
+      "national_percentile": 95,
+      "rank_interval": [
+        2,
+        2
+      ],
+      "rank_median": 2,
+      "pillars": {
+        "transport": {
+          "score": 100.0,
+          "features": 1551,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 92.7,
+          "features": 12,
+          "confidence": "high"
+        },
+        "health": {
+          "score": 100.0,
+          "features": 35,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 100.0,
+          "features": 277,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO321",
+        "RO424"
+      ],
+      "divergence": null
+    },
+    "RO411": {
+      "name": "RO411",
+      "nuts2_code": "",
+      "capacity_index": 24.3,
+      "capacity_index_arithmetic": 26.6,
+      "national_percentile": 57,
+      "rank_interval": [
+        16,
+        19
+      ],
+      "rank_median": 18,
+      "pillars": {
+        "transport": {
+          "score": 18.4,
+          "features": 1314,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 20.5,
+          "features": 14,
+          "confidence": "high"
+        },
+        "health": {
+          "score": 48.7,
+          "features": 85,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 19.0,
+          "features": 154,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO222",
+        "RO214"
+      ],
+      "divergence": null
+    },
+    "RO412": {
+      "name": "Gorj",
+      "nuts2_code": "RO41",
+      "capacity_index": 8.3,
+      "capacity_index_arithmetic": 10.6,
+      "national_percentile": 24,
+      "rank_interval": [
+        32,
+        34
+      ],
+      "rank_median": 33,
+      "pillars": {
+        "transport": {
+          "score": 13.5,
+          "features": 936,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 20.5,
+          "features": 11,
+          "confidence": "high"
+        },
+        "health": {
+          "score": 4.6,
+          "features": 18,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 3.7,
+          "features": 58,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO112",
+        "RO114"
+      ],
+      "divergence": null
+    },
+    "RO413": {
+      "name": "Mehedin\u021bi",
+      "nuts2_code": "RO41",
+      "capacity_index": 1.7,
+      "capacity_index_arithmetic": 9.0,
+      "national_percentile": 14,
+      "rank_interval": [
+        35,
+        36
+      ],
+      "rank_median": 36,
+      "pillars": {
+        "transport": {
+          "score": 20.3,
+          "features": 915,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 3.2,
+          "features": 2,
+          "confidence": "medium"
+        },
+        "health": {
+          "score": 12.6,
+          "features": 23,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 0.0,
+          "features": 35,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO116",
+        "RO216"
+      ],
+      "divergence": null
+    },
+    "RO414": {
+      "name": "Olt",
+      "nuts2_code": "RO41",
+      "capacity_index": 9.9,
+      "capacity_index_arithmetic": 12.3,
+      "national_percentile": 29,
+      "rank_interval": [
+        29,
+        31
+      ],
+      "rank_median": 30,
+      "pillars": {
+        "transport": {
+          "score": 17.7,
+          "features": 981,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 2.7,
+          "features": 2,
+          "confidence": "medium"
+        },
+        "health": {
+          "score": 12.7,
+          "features": 26,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 16.1,
+          "features": 105,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO216",
+        "RO124"
+      ],
+      "divergence": null
+    },
+    "RO415": {
+      "name": "V\u00e2lcea",
+      "nuts2_code": "RO41",
+      "capacity_index": 27.7,
+      "capacity_index_arithmetic": 33.3,
+      "national_percentile": 67,
+      "rank_interval": [
+        14,
+        15
+      ],
+      "rank_median": 14,
+      "pillars": {
+        "transport": {
+          "score": 32.4,
+          "features": 1291,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 8.6,
+          "features": 5,
+          "confidence": "medium"
+        },
+        "health": {
+          "score": 47.5,
+          "features": 65,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 44.8,
+          "features": 225,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO421",
+        "RO115"
+      ],
+      "divergence": null
+    },
+    "RO421": {
+      "name": "Arad",
+      "nuts2_code": "RO42",
+      "capacity_index": 20.6,
+      "capacity_index_arithmetic": 22.6,
+      "national_percentile": 43,
+      "rank_interval": [
+        22,
+        24
+      ],
+      "rank_median": 23,
+      "pillars": {
+        "transport": {
+          "score": 20.9,
+          "features": 1431,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 10.6,
+          "features": 8,
+          "confidence": "medium"
+        },
+        "health": {
+          "score": 22.4,
+          "features": 50,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 36.6,
+          "features": 256,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO123",
+        "RO115"
+      ],
+      "divergence": null
+    },
+    "RO422": {
+      "name": "Cara\u0219-Severin",
+      "nuts2_code": "RO42",
+      "capacity_index": 0.1,
+      "capacity_index_arithmetic": 1.7,
+      "national_percentile": 2,
+      "rank_interval": [
+        41,
+        42
+      ],
+      "rank_median": 42,
+      "pillars": {
+        "transport": {
+          "score": 0.0,
+          "features": 988,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 6.8,
+          "features": 6,
+          "confidence": "medium"
+        },
+        "health": {
+          "score": 0.1,
+          "features": 19,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 0.0,
+          "features": 62,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO317",
+        "RO216"
+      ],
+      "divergence": {
+        "type": "latent_fragility",
+        "resid_t": -3.362,
+        "lisa_quadrant": "LL",
+        "data_caveat": null,
+        "structural_hypothesis": "Structural mismatch between infrastructure endowment and realised growth. Investigate regulatory, institutional, or compositional factors locally. Hypothesis for investigation, not a causal claim."
+      }
+    },
+    "RO423": {
+      "name": "Hunedoara",
+      "nuts2_code": "RO42",
+      "capacity_index": 34.1,
+      "capacity_index_arithmetic": 42.4,
+      "national_percentile": 71,
+      "rank_interval": [
+        10,
+        12
+      ],
+      "rank_median": 11,
+      "pillars": {
+        "transport": {
+          "score": 40.5,
+          "features": 1744,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 90.0,
+          "features": 55,
+          "confidence": "high"
+        },
+        "health": {
+          "score": 23.7,
+          "features": 47,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 15.6,
+          "features": 128,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO224",
+        "RO126"
+      ],
+      "divergence": null
+    },
+    "RO424": {
+      "name": "RO424",
+      "nuts2_code": "",
+      "capacity_index": 63.3,
+      "capacity_index_arithmetic": 65.0,
+      "national_percentile": 86,
+      "rank_interval": [
+        6,
+        6
+      ],
+      "rank_median": 6,
+      "pillars": {
+        "transport": {
+          "score": 63.4,
+          "features": 2863,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 47.3,
+          "features": 37,
+          "confidence": "high"
+        },
+        "health": {
+          "score": 59.4,
+          "features": 119,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 89.9,
+          "features": 623,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO223",
+        "RO316"
+      ],
+      "divergence": null
+    },
+    "RO111": {
+      "name": "Bihor",
+      "nuts2_code": "RO11",
+      "capacity_index": 23.4,
+      "capacity_index_arithmetic": 26.9,
+      "national_percentile": 55,
+      "rank_interval": [
+        17,
+        19
+      ],
+      "rank_median": 18,
+      "pillars": {
+        "transport": {
+          "score": 48.5,
+          "features": 2109,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 18.3,
+          "features": 13,
+          "confidence": "high"
+        },
+        "health": {
+          "score": 11.7,
+          "features": 34,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 29.0,
+          "features": 212,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO314",
+        "RO115"
+      ],
+      "divergence": null
+    },
+    "RO112": {
+      "name": "Bistri\u021ba-N\u0103s\u0103ud",
+      "nuts2_code": "RO11",
+      "capacity_index": 3.4,
+      "capacity_index_arithmetic": 8.1,
+      "national_percentile": 19,
+      "rank_interval": [
+        34,
+        36
+      ],
+      "rank_median": 35,
+      "pillars": {
+        "transport": {
+          "score": 6.0,
+          "features": 735,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 24.4,
+          "features": 12,
+          "confidence": "high"
+        },
+        "health": {
+          "score": 1.0,
+          "features": 13,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 0.9,
+          "features": 43,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO412",
+        "RO114"
+      ],
+      "divergence": {
+        "type": "structural_bottleneck",
+        "resid_t": 2.725,
+        "lisa_quadrant": "LH",
+        "data_caveat": null,
+        "structural_hypothesis": "Structural mismatch between infrastructure endowment and realised growth. Investigate regulatory, institutional, or compositional factors locally. Hypothesis for investigation, not a causal claim."
+      }
+    },
+    "RO113": {
+      "name": "RO113",
+      "nuts2_code": "",
+      "capacity_index": 64.9,
+      "capacity_index_arithmetic": 73.1,
+      "national_percentile": 93,
+      "rank_interval": [
+        3,
+        3
+      ],
+      "rank_median": 3,
+      "pillars": {
+        "transport": {
+          "score": 65.0,
+          "features": 2260,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 100.0,
+          "features": 60,
+          "confidence": "high"
+        },
+        "health": {
+          "score": 100.0,
+          "features": 146,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 27.3,
+          "features": 182,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO122",
+        "RO213"
+      ],
+      "divergence": null
+    },
+    "RO114": {
+      "name": "Maramure\u0219",
+      "nuts2_code": "RO11",
+      "capacity_index": 9.7,
+      "capacity_index_arithmetic": 11.6,
+      "national_percentile": 26,
+      "rank_interval": [
+        30,
+        32
+      ],
+      "rank_median": 32,
+      "pillars": {
+        "transport": {
+          "score": 8.4,
+          "features": 899,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 19.0,
+          "features": 11,
+          "confidence": "high"
+        },
+        "health": {
+          "score": 15.4,
+          "features": 32,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 3.7,
+          "features": 62,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO412",
+        "RO112"
+      ],
+      "divergence": null
+    },
+    "RO115": {
+      "name": "Satu Mare",
+      "nuts2_code": "RO11",
+      "capacity_index": 26.7,
+      "capacity_index_arithmetic": 26.9,
+      "national_percentile": 62,
+      "rank_interval": [
+        16,
+        18
+      ],
+      "rank_median": 16,
+      "pillars": {
+        "transport": {
+          "score": 27.6,
+          "features": 939,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 24.2,
+          "features": 10,
+          "confidence": "medium"
+        },
+        "health": {
+          "score": 23.2,
+          "features": 30,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 32.8,
+          "features": 138,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO211",
+        "RO123"
+      ],
+      "divergence": null
+    },
+    "RO116": {
+      "name": "S\u0103laj",
+      "nuts2_code": "RO11",
+      "capacity_index": 1.0,
+      "capacity_index_arithmetic": 6.5,
+      "national_percentile": 10,
+      "rank_interval": [
+        38,
+        39
+      ],
+      "rank_median": 38,
+      "pillars": {
+        "transport": {
+          "score": 21.1,
+          "features": 711,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 1.6,
+          "features": 1,
+          "confidence": "low"
+        },
+        "health": {
+          "score": 3.5,
+          "features": 11,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 0.0,
+          "features": 26,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO413",
+        "RO216"
+      ],
+      "divergence": null
+    },
+    "RO121": {
+      "name": "Alba",
+      "nuts2_code": "RO12",
+      "capacity_index": 21.0,
+      "capacity_index_arithmetic": 26.6,
+      "national_percentile": 48,
+      "rank_interval": [
+        20,
+        23
+      ],
+      "rank_median": 22,
+      "pillars": {
+        "transport": {
+          "score": 33.4,
+          "features": 1398,
+          "confidence": "high"
+        },
+        "education": {
+          "score": 51.3,
+          "features": 28,
+          "confidence": "high"
+        },
+        "health": {
+          "score": 8.8,
+          "features": 24,
+          "confidence": "high"
+        },
+        "economic": {
+          "score": 12.8,
+          "features": 101,
+          "confidence": "high"
+        }
+      },
+      "peers": [
+        "RO311",
+        "RO215"
+      ],
+      "divergence": null
+    }
+  }
+}

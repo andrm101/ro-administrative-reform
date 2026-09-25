@@ -1,0 +1,43 @@
+nuts3_code,judet_name,county_seat,nuts2_code,siruta,current_status,proposed_regional_capital,proposed_treatment,proposed_reform_year,notes
+RO111,Bihor,Oradea,RO11,50,county_capital,0,1,2025,Demoted under proposed Nord-Vest region (Cluj leads)
+RO112,Bistrița-Năsăud,Bistrița,RO11,60,county_capital,0,1,2025,Demoted under proposed Nord-Vest region (Cluj leads)
+RO113,Cluj,Cluj-Napoca,RO11,130,county_capital,1,0,,Proposed regional capital for Nord-Vest; retains status
+RO114,Maramureș,Baia Mare,RO11,260,county_capital,0,1,2025,Demoted under proposed Nord-Vest region (Cluj leads)
+RO115,Satu Mare,Satu Mare,RO11,320,county_capital,0,1,2025,Demoted under proposed Nord-Vest region (Cluj leads)
+RO116,Sălaj,Zalău,RO11,330,county_capital,0,1,2025,Demoted under proposed Nord-Vest region (Cluj leads)
+RO121,Alba,Alba Iulia,RO12,10,county_capital,0,1,2025,Demoted under proposed Centru region (Brașov leads)
+RO122,Brașov,Brașov,RO12,80,county_capital,1,0,,Proposed regional capital for Centru; retains status
+RO123,Covasna,Sfântu Gheorghe,RO12,150,county_capital,0,1,2025,Demoted under proposed Centru region (Brașov leads)
+RO124,Harghita,Miercurea Ciuc,RO12,210,county_capital,0,1,2025,Demoted under proposed Centru region (Brașov leads)
+RO125,Mureș,Târgu Mureș,RO12,280,county_capital,0,1,2025,Demoted under proposed Centru region (Brașov leads)
+RO126,Sibiu,Sibiu,RO12,340,county_capital,0,1,2025,Demoted under proposed Centru region; contested (some proposals favor Sibiu over Brașov)
+RO211,Bacău,Bacău,RO21,40,county_capital,0,1,2025,Demoted under proposed Nord-Est region (Iași leads)
+RO212,Botoșani,Botoșani,RO21,70,county_capital,0,1,2025,Demoted under proposed Nord-Est region (Iași leads)
+RO213,Iași,Iași,RO21,240,county_capital,1,0,,Proposed regional capital for Nord-Est; retains status
+RO214,Neamț,Piatra Neamț,RO21,290,county_capital,0,1,2025,Demoted under proposed Nord-Est region (Iași leads)
+RO215,Suceava,Suceava,RO21,350,county_capital,0,1,2025,Demoted under proposed Nord-Est region (Iași leads)
+RO216,Vaslui,Vaslui,RO21,390,county_capital,0,1,2025,Demoted under proposed Nord-Est region (Iași leads)
+RO221,Brăila,Brăila,RO22,90,county_capital,0,1,2025,Demoted under proposed Sud-Est region (Constanța leads)
+RO222,Buzău,Buzău,RO22,100,county_capital,0,1,2025,Demoted under proposed Sud-Est region (Constanța leads)
+RO223,Constanța,Constanța,RO22,140,county_capital,1,0,,Proposed regional capital for Sud-Est; retains status
+RO224,Galați,Galați,RO22,180,county_capital,0,1,2025,Demoted under proposed Sud-Est region (Constanța leads)
+RO225,Tulcea,Tulcea,RO22,380,county_capital,0,1,2025,Demoted under proposed Sud-Est region (Constanța leads)
+RO226,Vrancea,Focșani,RO22,410,county_capital,0,1,2025,Demoted under proposed Sud-Est region (Constanța leads)
+RO311,Argeș,Pitești,RO31,30,county_capital,0,1,2025,Demoted under proposed Sud-Muntenia region (Prahova leads)
+RO312,Călărași,Călărași,RO31,120,county_capital,0,1,2025,Demoted under proposed Sud-Muntenia region (Prahova leads)
+RO313,Dâmbovița,Târgoviște,RO31,160,county_capital,0,1,2025,Demoted under proposed Sud-Muntenia region (Prahova leads)
+RO314,Giurgiu,Giurgiu,RO31,190,county_capital,0,1,2025,Demoted under proposed Sud-Muntenia region (Prahova leads)
+RO315,Ialomița,Slobozia,RO31,230,county_capital,0,1,2025,Demoted under proposed Sud-Muntenia region (Prahova leads)
+RO316,Prahova,Ploiești,RO31,310,county_capital,1,0,,Proposed regional capital for Sud-Muntenia; retains status
+RO317,Teleorman,Alexandria,RO31,360,county_capital,0,1,2025,Demoted under proposed Sud-Muntenia region (Prahova leads)
+RO321,Municipiul București,București,RO32,179,national_capital,1,0,,National capital; exempt from reform; always retains status
+RO322,Ilfov,Buftea,RO32,250,special,0,0,,Suburban county surrounding Bucharest; no real county seat; absorbed into București-Ilfov region but not a demotion event
+RO411,Dolj,Craiova,RO41,170,county_capital,1,0,,Proposed regional capital for Sud-Vest Oltenia; retains status
+RO412,Gorj,Târgu Jiu,RO41,200,county_capital,0,1,2025,Demoted under proposed Sud-Vest Oltenia region (Dolj leads)
+RO413,Mehedinți,Drobeta-Turnu Severin,RO41,270,county_capital,0,1,2025,Demoted under proposed Sud-Vest Oltenia region (Dolj leads)
+RO414,Olt,Slatina,RO41,300,county_capital,0,1,2025,Demoted under proposed Sud-Vest Oltenia region (Dolj leads)
+RO415,Vâlcea,Râmnicu Vâlcea,RO41,400,county_capital,0,1,2025,Demoted under proposed Sud-Vest Oltenia region (Dolj leads)
+RO421,Arad,Arad,RO42,20,county_capital,0,1,2025,Demoted under proposed Vest region (Timiș leads)
+RO422,Caraș-Severin,Reșița,RO42,110,county_capital,0,1,2025,Demoted under proposed Vest region (Timiș leads)
+RO423,Hunedoara,Deva,RO42,220,county_capital,0,1,2025,Demoted under proposed Vest region (Timiș leads)
+RO424,Timiș,Timișoara,RO42,370,county_capital,1,0,,Proposed regional capital for Vest; retains status

@@ -1,0 +1,177 @@
+{
+  "beta_gov": {
+    "value": 0.035116602227402594,
+    "se": 0.025778079870164186,
+    "id_strategy": "LP-IRF h1-3 (reform treatment)",
+    "source": "ro_lp_irfs.parquet",
+    "support": [
+      -0.003484880533205892,
+      0.07831495496668416
+    ],
+    "provenance": {
+      "method": "Cross-sectional LP (Jord\u00e0 2005), h=1-3 annualized mean, HC3 SEs",
+      "n_obs": 42,
+      "boot_se": 0.025778079870164186,
+      "boot_ci_90": [
+        -0.003484880533205892,
+        0.07831495496668416
+      ],
+      "estimated_at": "2026-06-06T08:12:13.079367+00:00",
+      "git_sha": "5430190"
+    }
+  },
+  "beta_K_hub": {
+    "value": 0.18487204198186533,
+    "se": 0.0933365108456828,
+    "id_strategy": "Barro LSDV (Nickell-corrected two-way FE), hub subset",
+    "source": "ro_panel_judet.parquet",
+    "support": [
+      0.11170190255173255,
+      0.3996525148137938
+    ],
+    "provenance": {
+      "method": "Barro beta-convergence, Nickell-corrected two-way FE (county+year), HC3 SE point est.; B=2000 block bootstrap (within-demeaning). Value = convergence speed |beta| (positive); half-life = ln(2)/value.",
+      "n_obs": 192,
+      "r2": 0.6665023756667552,
+      "half_life_years": 3.7493348000555877,
+      "boot_se": 0.0933365108456828,
+      "boot_ci_90": [
+        0.11170190255173255,
+        0.3996525148137938
+      ],
+      "estimated_at": "2026-06-06T08:12:13.923670+00:00",
+      "git_sha": "5430190"
+    }
+  },
+  "beta_K_sat": {
+    "value": 0.2908008727410701,
+    "se": 0.04151684855729311,
+    "id_strategy": "Barro LSDV (Nickell-corrected two-way FE), satellite subset",
+    "source": "ro_panel_judet.parquet",
+    "support": [
+      0.22655251693058154,
+      0.3653144041109486
+    ],
+    "provenance": {
+      "method": "Barro beta-convergence, Nickell-corrected two-way FE (county+year), HC3 SE point est.; B=2000 block bootstrap (within-demeaning). Value = convergence speed |beta| (positive); half-life = ln(2)/value.",
+      "n_obs": 816,
+      "r2": 0.6783101961398375,
+      "half_life_years": 2.3835801248682134,
+      "boot_se": 0.04151684855729311,
+      "boot_ci_90": [
+        0.22655251693058154,
+        0.3653144041109486
+      ],
+      "estimated_at": "2026-06-06T08:12:13.923670+00:00",
+      "git_sha": "5430190"
+    }
+  },
+  "beta_mig": {
+    "value": 0.0499393939393921,
+    "se": 1.5557684672288412,
+    "id_strategy": "LP-IRF h1-3, sign-flipped for subsidy (reform-shock PROXY, not \u20ac/cap)",
+    "source": "ro_lp_irfs.parquet",
+    "support": [
+      -2.42926130511464,
+      2.657040844017092
+    ],
+    "provenance": {
+      "method": "Cross-sectional LP (Jord\u00e0 2005), net_migration_rate, h=1-3 mean, sign-flipped: a retention subsidy is the inverse of the demotion shock the IRF identifies. Reform-shock PROXY (not a \u20ac/cap subsidy elasticity); essentially pre-treatment and noisy \u2014 see the wide 90% CI.",
+      "n_obs": 42,
+      "boot_se": 1.5557684672288412,
+      "boot_ci_90": [
+        -2.42926130511464,
+        2.657040844017092
+      ],
+      "estimated_at": "2026-06-06T08:12:13.079367+00:00",
+      "git_sha": "5430190"
+    }
+  },
+  "lambda": {
+    "value": 0.4,
+    "se": 0.2,
+    "id_strategy": "literature prior (conservation not identified \u2014 see diagnostics)",
+    "source": "PL intra-regional flows (Baranowska-Rataj & Matysiak 2012)",
+    "support": [
+      0.0,
+      1.0
+    ],
+    "provenance": {
+      "method": "Literature prior. Post-reform period empty (reform_year=2025), so a hub\u2192satellite conservation ratio is unobservable. Historical within-NUTS2 hub/satellite net-migration co-movement = +0.734 (they move together under common regional shocks, not in substitution), so conservation is not identified from observed data either.",
+      "citation": "Baranowska-Rataj & Matysiak (2012); see diagnostics.lambda_comovement"
+    }
+  },
+  "beta_fert": {
+    "value": 0.004,
+    "se": 0.0015,
+    "id_strategy": "literature prior (no \u20ac/cap fertility shock in panel)",
+    "source": "Luci-Sobotka (2008); Bj\u00f6rklund (2006)",
+    "support": [
+      0.0,
+      600.0
+    ],
+    "provenance": {
+      "method": "Literature prior. The panel's nat_change_rate LP-IRF shows births falling after demotion (a treatment-direction artefact), the wrong sign for a pronatalist-transfer elasticity; using it would be a sign error.",
+      "citation": "Luci-Sobotka & Th\u00e9venon (2008); Bj\u00f6rklund (2006)"
+    }
+  },
+  "beta_edu": {
+    "value": 0.03,
+    "se": 0.01,
+    "id_strategy": "literature prior (no skills series in panel)",
+    "source": "Mincer (1974); OECD returns-to-schooling",
+    "support": [
+      0.0,
+      5.0
+    ],
+    "provenance": {
+      "method": "Literature prior. No skills-investment series exists in panel_judet.",
+      "citation": "Mincer (1974); OECD Education at a Glance 2023"
+    }
+  },
+  "gamma": {
+    "value": 0.3,
+    "se": 0.15,
+    "id_strategy": "literature prior (no accessibility data ingested)",
+    "source": "Holl (2007); ESPON accessibility",
+    "support": [
+      0.0,
+      1.0
+    ],
+    "provenance": {
+      "method": "Literature prior. No ESPON accessibility dataset ingested (deferred to Plan 3).",
+      "citation": "Holl (2007) \u2014 Roads and regional economic growth in Spain"
+    }
+  },
+  "tau": 0.2,
+  "delta": 0.05,
+  "discount_rate": 0.03,
+  "moretti": {
+    "T1": 0.025,
+    "T2": 0.02,
+    "T3": 0.015,
+    "T4": 0.012,
+    "T5": 0.01,
+    "T6": 0.008,
+    "T7": 0.007,
+    "T8": 0.006
+  },
+  "regime_test": {
+    "p_value": 0.84359195921753,
+    "stat": -0.19730104808028154,
+    "df": 941
+  },
+  "diagnostics": {
+    "ips_stat": 8.965969185283418,
+    "ips_pvalue": 1.0,
+    "conclusion": "non-stationary: unit root not rejected at 10%; Barro spec in \u0394y on lagged level is robust (IPS constants use asymptotic p=0 approx.; mean AIC lag=3.7)",
+    "lambda_comovement": 0.7335325693997001,
+    "beta_gov_sdid_crosscheck": {
+      "lpirf": 0.035116602227402594,
+      "sdid": null,
+      "ratio": null,
+      "agree": false
+    }
+  },
+  "provisional": true
+}

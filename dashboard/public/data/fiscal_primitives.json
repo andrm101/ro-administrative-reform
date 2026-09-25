@@ -1,0 +1,84 @@
+{
+  "counties": [
+    {
+      "nuts3_code": "RO111",
+      "nuts2_code": "RO11",
+      "role": "hub",
+      "gva_pc": 11243.62,
+      "population": 555012.0,
+      "vitality_index": 0.24884960176892812,
+      "tier1_gate": true,
+      "moretti_tier": "T4"
+    },
+    {
+      "nuts3_code": "RO125",
+      "nuts2_code": "RO12",
+      "role": "hub",
+      "gva_pc": 16229.32,
+      "population": 515501.0,
+      "vitality_index": -0.23257727085138002,
+      "tier1_gate": false,
+      "moretti_tier": "T4"
+    },
+    {
+      "nuts3_code": "RO126",
+      "nuts2_code": "RO12",
+      "role": "satellite",
+      "gva_pc": 17316.19,
+      "population": 390537.0,
+      "vitality_index": -0.232961421660574,
+      "tier1_gate": false,
+      "moretti_tier": "T4"
+    },
+    {
+      "nuts3_code": "RO211",
+      "nuts2_code": "RO21",
+      "role": "satellite",
+      "gva_pc": 9930.54,
+      "population": 587606.0,
+      "vitality_index": 0.238296478601188,
+      "tier1_gate": true,
+      "moretti_tier": "T4"
+    },
+    {
+      "nuts3_code": "RO215",
+      "nuts2_code": "RO21",
+      "role": "hub",
+      "gva_pc": 8593.61,
+      "population": 638972.0,
+      "vitality_index": 0.6931585493688703,
+      "tier1_gate": true,
+      "moretti_tier": "T4"
+    },
+    {
+      "nuts3_code": "RO224",
+      "nuts2_code": "RO22",
+      "role": "hub",
+      "gva_pc": 11890.99,
+      "population": 475959.0,
+      "vitality_index": -0.21349794782929488,
+      "tier1_gate": true,
+      "moretti_tier": "T4"
+    },
+    {
+      "nuts3_code": "RO311",
+      "nuts2_code": "RO31",
+      "role": "hub",
+      "gva_pc": 14027.1,
+      "population": 561167.0,
+      "vitality_index": -0.1443280379761748,
+      "tier1_gate": true,
+      "moretti_tier": "T4"
+    },
+    {
+      "nuts3_code": "RO421",
+      "nuts2_code": "RO42",
+      "role": "hub",
+      "gva_pc": 15915.78,
+      "population": 407752.0,
+      "vitality_index": -0.48527299495589676,
+      "tier1_gate": false,
+      "moretti_tier": "T4"
+    }
+  ]
+}

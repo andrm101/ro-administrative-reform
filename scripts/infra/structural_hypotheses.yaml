@@ -1,0 +1,25 @@
+# Researcher-maintained structural hypotheses for divergence-flagged counties.
+# Each entry is explicitly labelled as a hypothesis for investigation, not a causal claim.
+# Keyed by NUTS3 code.
+RO111:  # Bihor
+  hypothesis: >
+    Cross-border trade exposure to Hungary may redirect investment and labour
+    toward the Hungarian side. Institutional absorptive-capacity constraints
+    (regulatory complexity, planning delays) may limit conversion of physical
+    infrastructure into economic output. Hypothesis for investigation.
+RO125:  # Mureș
+  hypothesis: >
+    Ethnic heterogeneity and fragmented local governance may increase coordination
+    costs for investment decisions. The county's industrial legacy (chemical,
+    pharmaceutical) creates path-dependency that physical connectivity alone cannot
+    overcome. Hypothesis for investigation.
+RO174:  # Galați
+  hypothesis: >
+    Heavy steel-industry legacy (Sidex/ArcelorMittal) anchors capital in declining
+    sectors. Port-hinterland connectivity exists but does not translate into
+    diversified export growth. Structural transformation lag. Hypothesis for investigation.
+RO216:  # Brăila
+  hypothesis: >
+    Port infrastructure present but underutilised; agricultural hinterland with
+    low value-added processing. Proximity to Galați creates competition rather
+    than complementarity. Hypothesis for investigation.
