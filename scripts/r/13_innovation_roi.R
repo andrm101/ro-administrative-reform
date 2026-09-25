@@ -139,8 +139,15 @@ estimate_a_raw <- read_csv(ESTIMATE_A_PATH, show_col_types = FALSE) |>
 ro_nuts2_archetype <- read_parquet(
   file.path(SIBLING_ROOT, "EU-Innovation-Panel", "data", "gold", "region_profiles_gold.parquet")
 ) |>
-  as.data.frame() |>
-  tibble::rownames_to_column("nuts2_code") |>
+  as.data.frame()
+# arrow::read_parquet() already restores the pandas index as a real nuts2_code
+# column (unlike Python's pd.read_parquet, which keeps it as an index unless
+# reset_index() is called) -- guard rather than assume, since a stale Gold
+# parquet without embedded pandas index metadata would need rownames_to_column.
+if (!"nuts2_code" %in% colnames(ro_nuts2_archetype)) {
+  ro_nuts2_archetype <- tibble::rownames_to_column(ro_nuts2_archetype, "nuts2_code")
+}
+ro_nuts2_archetype <- ro_nuts2_archetype |>
   filter(str_starts(nuts2_code, "RO")) |>
   select(nuts2_code, archetype_id)
 
